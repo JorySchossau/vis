@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://3d-scene-bootstrap.gd" type="Script" id=1]
+[ext_resource path="res://default_env.tres" type="Environment" id=2]
+
+[node name="Node2D" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.864553, 0.250471, -0.435674, 0, 0.866942, 0.49841, 0.502541, -0.430902, 0.749517, -1.53343, 1.52871, 2.11308 )
+environment = ExtResource( 2 )
