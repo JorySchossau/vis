@@ -6,7 +6,7 @@
 Download both the executable, and logic/assets file. Later, the assets file will be bundled into the executable.
 
 ##### Executable
-(These are basically just the executables from the Godot Export Templates, minified (linux only for now), and hosted here for your convenience)
+(These are basically just the executables from the Godot Export Templates, minified (except osx), and hosted here for your convenience)
 * [Windows](https://raw.githubusercontent.com/JorySchossau/vis/master/releases/exe/win/vis.exe) (untested)
 * [MacOS](https://raw.githubusercontent.com/JorySchossau/vis/master/releases/exe/osx/vis) (untested)
 * [Linux](https://raw.githubusercontent.com/JorySchossau/vis/master/releases/exe/lin/vis)
