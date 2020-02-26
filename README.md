@@ -23,3 +23,7 @@ Intended to be used on the command line.
 ```
 
 See the documentation for gd script at the official [Godot Engine Documentation](https://docs.godotengine.org/).
+
+While you can use it purely on the command line and with any text editor, it's most enjoyable to use with the full IDE experience with code error detection and autocompletion. To do that you should download the **Godot** game engine (no installation required), import a project, and use the `src/` directory from this `vis` repository as a project directory. After that, since you are not using the command line, you'll need to set the default command line arguments that `vis` expects, under `settings` menu, `project settings`, `General` tab, `Editor` category, and set `Main Run Args` to `--2d --script=readcsv.gd --file=animat_behavior.csv`.
+
+The `vis` tool expects either `--2d` or `--3d`, then the `--script=` paramter should point to your visualization script. This particular included demo visualization script `readcsv.gd` instructs `vis` to expect another called `--file`, which is a csv file containing the data it will plot and animate.
