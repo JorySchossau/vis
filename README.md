@@ -1,5 +1,5 @@
 # vis
-2d and 3d cross-platform visualization tool, similar to Processing, based on Godot Engine.
+2d and 3d cross-platform visualization tool, similar to Processing, based on Godot Engine. Unliked Processing, Vis handles rendering for you, while still giving you performant control, so you don't have to "paint every frame" and you are not limited to immediate-style GUI.
 
 ### Releases
 
