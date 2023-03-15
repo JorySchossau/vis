@@ -1,12 +1,12 @@
 extends Node
 
-var hook:Spatial
+var hook:Node3D
 
 var timer = Timer.new()
 var fpstxt = Label.new()
 
 func fpsUpdate():
-	fpstxt.text = "fps: "+String(Engine.get_frames_per_second())
+	fpstxt.text = "fps: "+str(Engine.get_frames_per_second())
 
 func _input(event):
 	if event.is_action("ui_quit"):
@@ -24,10 +24,10 @@ func cleanAndQuit():
 	get_tree().quit()
 
 func _ready():
-	#VisualServer.set_default_clear_color(Color.black)
-	hook = Spatial.new()
+	#RenderingServer.set_default_clear_color(Color.BLACK)
+	hook = Node3D.new()
 	var script = GDScript.new()
-	var file = File.new()
+	var file: FileAccess
 	var args = OS.get_cmdline_args()
 	for arg in args:
 		var split = arg.split('=')
@@ -40,7 +40,8 @@ func _ready():
 		if VIS.args.has("--script"):
 			#var filename = args[0].split('=')[1]
 			var filename = VIS.args["--script"]
-			if file.open(filename, File.READ) != 0:
+			file = FileAccess.open(filename, FileAccess.READ)
+			if file == null:
 				print("Error opening file:"+filename)
 				return
 			script.set_source_code(file.get_as_text())
@@ -50,7 +51,7 @@ func _ready():
 			add_child(hook)
 			## add fps timer
 			self.add_child(timer)
-			timer.connect("timeout", self, "fpsUpdate")
+			timer.connect("timeout",Callable(self,"fpsUpdate"))
 			timer.wait_time = 1.0
 			timer.one_shot = false
 			self.add_child(fpstxt)
