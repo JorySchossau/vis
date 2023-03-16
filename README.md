@@ -16,12 +16,19 @@ Download both the executable, and logic/assets file. Later, the assets file will
 Intended to be used on the command line.
 
 ```bash
-./vis --2d --script=myvisualization.gd
+# example 1
+cd examples/2d-bouncing
+# (download vis tool to here or put it on your path)
+./vis --2d --script=simple.gd
 ```
 
 Particular visualization scripts may themselves require additional arguments, such as the 2d-foraging example:
 
 ```bash
+# example 2
+cd examples/2d-foraging
+# (download vis tool to here or put it on your path)
+unzip csvdata.zip
 ./vis --2d --script=readcsv.gd --file=csvdata.csv
 ```
 
