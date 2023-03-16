@@ -29,4 +29,11 @@ To easily make an editor project for your gd file, use the following command the
 ./vis --2d --script=myvisualization.gd --develop
 ```
 
-The `vis` tool expects either `--2d` or `--3d`, then the `--script=` paramter should point to your visualization script. This particular included demo visualization script `readcsv.gd` instructs `vis` to expect another called `--file`, which is a csv file containing the data it will plot and animate.
+### Options
+
+* `--2d` expects a 2D visualization script
+* `--3d` expects a 3D visualization script
+* `--script=<filename>` specify a gd script to run
+* `--develop` generate a project for editing that script
+* `--write-movie <filename.avi>` run the visualization, and create a movie (godot v4 feature)
+* `--fixed-fps 30` limit the movie-writing to a certain FPS (godot v4 feature)
